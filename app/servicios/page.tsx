@@ -1,0 +1,5 @@
+import type {Metadata} from "next";
+import { services } from "@/lib/content";
+import { CTASection, PageHero, ServiceCard, Kicker } from "@/components/ui";
+export const metadata:Metadata={title:"Servicios",description:"Servicios de topografía, geología, geodesia, aerofotogrametría y batimetría."};
+export default function Servicios(){return <main><PageHero crumb="Servicios" title="Especialidades técnicas para proyectos exigentes." description="Explora las áreas de servicio de INTOSIM y conoce sus aplicaciones, entregables y capacidades." image="/images/planta-chancado.webp"/><section className="section"><div className="container"><div className="section-head"><div><Kicker>Especialidades</Kicker><h2>Información confiable para cada desafío.</h2><p>Selecciona una especialidad para revisar sus principales aplicaciones y productos.</p></div></div><div className="service-grid">{services.map(s=><ServiceCard key={s.slug} title={s.name} description={s.short} href={`/servicios/${s.slug}/`} image={s.image}/>)}</div></div></section><CTASection/></main>}

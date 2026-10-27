@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound(){return <main className="not-found container"><h1 style={{fontFamily:"var(--font-manrope),sans-serif",fontSize:48,color:"var(--blue)"}}>No encontramos esta página.</h1><p style={{color:"var(--muted)"}}>Puede que el enlace haya cambiado o que la dirección no exista.</p><Link className="button button-red" href="/">Volver al inicio ↗</Link></main>}
